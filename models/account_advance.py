@@ -495,6 +495,7 @@ class AccountPayment(models.Model):
     @api.depends('journal_id', 'partner_id', 'partner_type')
     def _compute_destination_account_id(self):
         self.destination_account_id = False
+        
         for pay in self:
             if pay.partner_type == 'customer':
                 # Receive money from invoice or send money to refund it.

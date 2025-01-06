@@ -13,6 +13,7 @@ class ResCompany(models.Model):
         check_company=True,
         string="Cuenta de Anticipos de Clientes"
     )
+    
     l10n_ec_payment_advance_vendor_id = fields.Many2one(
         comodel_name='account.account',
         check_company=True,
