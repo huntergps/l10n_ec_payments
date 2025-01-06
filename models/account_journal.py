@@ -67,13 +67,13 @@ class AccountJournal(models.Model):
         if self.company_id.country_id.code != "EC":
             return res
         if self._is_payment_method_available('deposit_cheque'):
-            res |= self.env.ref('l10n_ec_payments.account_payment_method_deposit_cheque_in')
+            res |= self.env.ref('l10n_ec_payment.account_payment_method_deposit_cheque_in')
         if self._is_payment_method_available('card_credit'):
-            res |= self.env.ref('l10n_ec_payments.account_payment_method_credit_card_in')
+            res |= self.env.ref('l10n_ec_payment.account_payment_method_credit_card_in')
         if self._is_payment_method_available('transf'):
-            res |= self.env.ref('l10n_ec_payments.account_payment_method_transf_in')
+            res |= self.env.ref('l10n_ec_payment.account_payment_method_transf_in')
         if self._is_payment_method_available('card_debit'):
-            res |= self.env.ref('l10n_ec_payments.account_payment_method_debit_card_in')
+            res |= self.env.ref('l10n_ec_payment.account_payment_method_debit_card_in')
         print('_default_inbound_payment_methods:',res)
         return res
 
@@ -83,13 +83,13 @@ class AccountJournal(models.Model):
         if self.company_id.country_id.code != "EC":
             return res
         if self._is_payment_method_available('card_debit'):
-            res |= self.env.ref('l10n_ec_payments.account_payment_method_debit_card_out')
+            res |= self.env.ref('l10n_ec_payment.account_payment_method_debit_card_out')
         if self._is_payment_method_available('card_credit'):
-            res |= self.env.ref('l10n_ec_payments.account_payment_method_credit_card_out')
+            res |= self.env.ref('l10n_ec_payment.account_payment_method_credit_card_out')
         if self._is_payment_method_available('transf'):
-            res |= self.env.ref('l10n_ec_payments.account_payment_method_transf_out')
+            res |= self.env.ref('l10n_ec_payment.account_payment_method_transf_out')
         if self._is_payment_method_available('bank_debit'):
-            res |= self.env.ref('l10n_ec_payments.account_payment_method_bank_debit_out')
+            res |= self.env.ref('l10n_ec_payment.account_payment_method_bank_debit_out')
         print('_default_outbound_payment_methods:',res)
         return res
 

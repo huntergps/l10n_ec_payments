@@ -2,13 +2,13 @@
 <odoo>
     <data>
 
-        <record id="res_config_settings_l10n_ec_payments" model="ir.ui.view">
+        <record id="res_config_settings_l10n_ec_payment" model="ir.ui.view">
             <field name="name">res.config.settings.l10n.ec.edi</field>
             <field name="model">res.config.settings</field>
             <field name="inherit_id" ref="account.res_config_settings_view_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//block[@id='invoicing_settings']" position="before">
-                    <block id="l10n_ec_payments_settings" title="Pagos en Ecuador" invisible="country_code != 'EC'">
+                    <block id="l10n_ec_payment_settings" title="Pagos en Ecuador" invisible="country_code != 'EC'">
 
 
 

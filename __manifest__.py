@@ -29,15 +29,18 @@
     ],
     'data': [
         'data/account_payment_method_data.xml',
+        'data/account_credit_card_brand_data.xml',
+        'data/account_credit_card_deadline_data.xml',
         'data/ir_sequence.xml',
         'security/account_security.xml',
         'security/ir.model.access.csv',
-        'views/account_move_view.xml',
         'views/account_payment_view.xml',
         'views/account_journal_view.xml',
         'views/account_advance_view.xml',
         'views/account_move_view.xml',
         'views/account_menuitem.xml',
+        'views/account_credit_card_brand_view.xml',
+        'views/account_credit_card_deadline_view.xml',
         'views/res_config_settings_views.xml'
 
     ],

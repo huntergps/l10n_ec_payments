@@ -22,7 +22,7 @@ class AccountPayment(models.Model):
 
     move_id = fields.Many2one(
         comodel_name='account.move',
-        string='Diario',
+        string='Asiento',
         index=True,
         copy=False,
         check_company=True)
@@ -68,7 +68,7 @@ class AccountPayment(models.Model):
 
 
     # == Advance methods fields ==
-    advance_method_line_id = fields.Many2one('account.payment.method.line', string='Metodo',
+    advance_method_line_id = fields.Many2one('account.payment.method.line', string='Linea Metodo',
         readonly=False, store=True, copy=False,
         compute='_compute_advance_method_line_id',
         domain="[('id', 'in', available_advance_method_line_ids)]"

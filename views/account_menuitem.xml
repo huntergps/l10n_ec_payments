@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<!-- 
+<!--
         <menuitem
           id="menu_action_account_payments_transfer"
           name="Transferencias Contables"
@@ -24,6 +24,14 @@
         parent="account.menu_finance_payables"
         sequence="20"
       />
+
+      <menuitem
+        id="menu_finance_configuration_menu_tarjetas_credito"
+        name="Tarjetas de Crédito"
+        parent="account.menu_finance_configuration"
+        groups="account.group_account_manager,account.group_account_user,account.group_account_invoice"
+        sequence="100"
+        />
 
 
 </odoo>
